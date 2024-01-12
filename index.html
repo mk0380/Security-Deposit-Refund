@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./logo.png">
+    <script type="module" src="./index.js"></script>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="./FileSaver.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>DOSA | IIT Kanpur</title>
+</head>
+
+<body>
+    <!-- <iframe src="./Security_Deposit_Refund.pdf" frameborder="0" id="mypdf" height="700px" width="600px"></iframe> -->
+    <div class="container">
+        <div class="text">
+            Form For Refund Of Institute Amenities Security Deposit
+        </div>
+        <form id="google-sheet">
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" id="studentInput" name="Name" required>
+                    <div class="underline"></div>
+                    <label id="studentName">Name</label>
+                </div>
+                <div class="input-data">
+                    <input type="number" id="rollInput" name="Roll No" required>
+                    <div class="underline"></div>
+                    <label id="rollName">Roll No.</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <select name="Hall No" id="hallInput">
+                        <option value="">Hall Of Residence From Where No-Dues & Clearance Certificate Is Issued</option>
+                        <option value="1">Hall Of Residence No. 1</option>
+                        <option value="2">Hall Of Residence No. 2</option>
+                        <option value="3">Hall Of Residence No. 3</option>
+                        <option value="4">Hall Of Residence No. 4</option>
+                        <option value="5">Hall Of Residence No. 5</option>
+                        <option value="7">Hall Of Residence No. 7</option>
+                        <option value="8">Hall Of Residence No. 8</option>
+                        <option value="9">Hall Of Residence No. 9</option>
+                        <option value="10">Hall Of Residence No. 10</option>
+                        <option value="11">Hall Of Residence No. 11</option>
+                        <option value="12">Hall Of Residence No. 12</option>
+                        <option value="13">Hall Of Residence No. 13</option>
+                        <option value="14">Hall Of Residence No. 14</option>
+                        <option value="Girls-Hostel-1">Hall Of Residence For Girls-1</option>
+                        <option value="6">Hall Of Residence For Girls-6</option>
+                        <option value=" ">None Of The Above</option>
+                    </select>
+                    <div class="underline"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="email" id="emailInput" name="Email" required>
+                    <div class="underline"></div>
+                    <label id="emailName">Email</label>
+                </div>
+                <div class="input-data">
+                    <input type="tel" id="mobileInput" name="Mobile" required>
+                    <div class="underline"></div>
+                    <label id="contactParName">Mobile No.</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <select name="Programme" id="programmeInput">
+                        <option value="">Undergraduate/Postgraduate</option>
+                        <option value="ug">Undergraduate (UG)</option>
+                        <option value="pg">Postgraduate (PG)</option>
+                        <option value=" ">None Of The Above</option>
+                    </select>
+                </div>
+                <div class="input-data">
+                    <select name="Registered Year No" id="yearInput">
+                        <option value="">Registration Year As UG/PG Student</option>
+                    </select>
+                </div>
+            </div>
+            <div style="text-align: center;font-size: 17px;font-weight: 500;color: red;">
+                <label>The individual requests that the Institute regulates the Amenities Security Deposit after
+                    adjusting any dues in accordance with the opinions appended below:</label>
+            </div>
+            <div class="form-row" style="display: flex;flex-wrap: wrap;gap: 30px;">
+                <div style="display: flex;justify-content:start;align-items: center;">
+                    <div><input type="checkbox" id="con1" name="con1" value="" style="margin-right: 5px;"></div>
+                    <div><label for="con1" style="cursor: pointer;">Wish to contribute a certain amount in favour of
+                            Deans Capital Fund of the Institute.</label></div>
+                </div>
+                <div class="input-data" id="div1">
+                    <input type="number" id="amt1" name="Amount">
+                    <div class="underline"></div>
+                    <label id="contactParName">Please input the amount you are willing to contribute.</label>
+                </div>
+                <div style="display: flex;justify-content: start;align-items: center;">
+                    <div><input type="checkbox" id="con2" name="con2" value="" style="margin-right: 5px;"></div>
+                    <div><label for="con2" style="cursor: pointer;">Wish to contribute a certain amount for Senior Class
+                            Gift programme.</label></div>
+                </div>
+                <div class="input-data" id="div2">
+                    <input type="number" id="amt2" name="Amount">
+                    <div class="underline"></div>
+                    <label id="contactParName">Please input the amount you are willing to contribute.</label>
+                </div>
+                <div style="display: flex;justify-content: start;align-items: center;">
+                    <div><input type="checkbox" id="con3" name="con3" value="" style="margin-right: 5px;">
+                    </div>
+                    <div><label for="con3" style="cursor: pointer;">The amount of <span
+                                style="font-weight: 700;">₹5000/-</span> deposited by me as <span
+                                style="font-weight: 700;">Institute Amenities Security Deposit</span> may kindly be
+                            refunded to me after adjusting the dues in my bank account number mentioned below:
+                        </label></div>
+                </div>
+                <div id="div3">
+                    <div class="form-row">
+                        <div class="input-data">
+                            <select name="Bank Name" id="bankNameInput">
+                                <option value="">Bank Name</option>
+                                <option value="Axis Bank">Axis Bank</option>
+                                <option value="Bank of Baroda">Bank of Baroda</option>
+                                <option value="Canara Bank">Canara Bank</option>
+                                <option value="Central Bank of India">Central Bank of India</option>
+                                <option value="Federal Bank">Federal Bank</option>
+                                <option value="HDFC Bank">HDFC Bank</option>
+                                <option value="ICICI Bank">ICICI Bank</option>
+                                <option value="IDBI Bank Ltd">IDBI Bank Ltd</option>
+                                <option value="IDFC First Bank">IDFC First Bank</option>
+                                <option value="Indian Bank">Indian Bank</option>
+                                <option value="Indian Overseas Bank">Indian Overseas Bank</option>
+                                <option value="IndusInd Bank">IndusInd Bank</option>
+                                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                                <option value="Oriental Bank of Commerce">Oriental Bank of Commerce</option>
+                                <option value="Punjab National Bank">Punjab National Bank</option>
+                                <option value="South Indian Bank">South Indian Bank</option>
+                                <option value="State Bank of India">State Bank of India</option>
+                                <option value="Union Bank of India">Union Bank of India</option>
+                                <option value="Yes Bank">Yes Bank</option>
+                                <option value=" ">None Of The Above</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="text" id="accInput" name="Account No.">
+                            <div class="underline"></div>
+                            <label id="accInputt">Account no.</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="text" id="ifscInput" name="IFSC">
+                            <div class="underline"></div>
+                            <label id="ifscInputt">IFSC</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data textarea">
+                    <div class="form-row submit-btn">
+                        <div class="input-data" id="btn">
+                            <div class="inner"></div>
+                            <input type="button" value="Submit" name="submit" id="btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+
+        const selectElement = document.getElementById("yearInput");
+        const currentYear = new Date().getFullYear();
+
+        for (let year = currentYear - 8; year <= currentYear + 3; year++) {
+            const option = document.createElement("option");
+            option.value = year;
+            option.textContent = year;
+            selectElement.appendChild(option);
+        }
+
+        const checkbox1 = document.getElementById('con1');
+        const checkbox2 = document.getElementById('con2');
+        const checkbox3 = document.getElementById('con3');
+
+        const div1 = document.getElementById('div1');
+        const div2 = document.getElementById('div2');
+        const div3 = document.getElementById('div3');
+
+        checkbox1.addEventListener('change', function () {
+            if (this.checked) {
+                div1.style.display = 'block';
+            } else {
+                div1.style.display = 'none';
+            }
+        });
+        div1.style.display = 'none';
+
+        checkbox2.addEventListener('change', function () {
+            if (this.checked) {
+                div2.style.display = 'block';
+            } else {
+                div2.style.display = 'none';
+            }
+        });
+        div2.style.display = 'none';
+
+        checkbox3.addEventListener('change', function () {
+            if (this.checked) {
+                div3.style.display = 'block';
+            } else {
+                div3.style.display = 'none';
+            }
+        });
+        div3.style.display = 'none';
+
+
+
+        const name = document.querySelector("#studentInput")
+        const roll = document.querySelector("#rollInput")
+        const hallNo = document.querySelector("#hallInput")
+        const email = document.querySelector("#emailInput")
+        const mobile = document.querySelector("#mobileInput")
+        const programme = document.querySelector("#programmeInput")
+        const year = document.querySelector("#yearInput")
+        const amount1 = document.querySelector("#amt1")
+        const amount2 = document.querySelector("#amt2")
+        const bankName = document.querySelector("#bankNameInput")
+        const accNo = document.querySelector("#accInput")
+        const ifscCode = document.querySelector("#ifscInput")
+
+
+        const con1 = document.querySelector("#con1")
+        const con2 = document.querySelector("#con2")
+        const con3 = document.querySelector("#con3")
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzzBPXiWTAPvC2eiG5gXXy7luYZzrEIykL6lIU_RzQOH-TaJyx1n-mHsmC4kklHPs-YjQ/exec'
+        const form = document.getElementById('google-sheet')
+        const btn = document.getElementById('btn')
+
+        btn.addEventListener('click', e => {
+            e.preventDefault()
+            if (year.value.length == 0 || hallNo.value.length == 0 || name.value.length == 0 || roll.value.length == 0 || mobile.value.length == 0 || email.value.length == 0 || programme.value.length == 0) {
+                return
+            }
+            if (!con1.checked && !con2.checked && !con3.checked) {
+                return
+            }
+            if ((con1.checked && amount1.value.length==0) || (con2.checked && amount2.value.length==0)) {
+                return
+            }
+
+            if (con3.checked && (bankName.value.length == 0 || accNo.value.length == 0 || ifscCode.value.length == 0)) {
+                return
+            }
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Refund Form submitted successfully"))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
