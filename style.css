@@ -151,6 +151,10 @@ body::-webkit-scrollbar { /* WebKit */
   position: relative;
   z-index: 2;
 }
+.required {
+  color: red;
+  margin-left: 2px; /* Adjust as needed */
+}
 @media (max-width: 700px) {
   .container .text{
     font-size: 30px;

@@ -24,18 +24,18 @@
                 <div class="input-data">
                     <input type="text" id="studentInput" name="Name" required>
                     <div class="underline"></div>
-                    <label id="studentName">Name</label>
+                    <label id="studentName">Name<span class="required">*</span></label>
                 </div>
                 <div class="input-data">
                     <input type="number" id="rollInput" name="Roll No" required>
                     <div class="underline"></div>
-                    <label id="rollName">Roll No.</label>
+                    <label id="rollName">Roll No<span class="required">*</span></label>
                 </div>
             </div>
             <div class="form-row">
                 <div class="input-data">
                     <select name="Hall No" id="hallInput">
-                        <option value="">Hall Of Residence From Where No-Dues & Clearance Certificate Is Issued</option>
+                        <option value="">Hall Of Residence From Where No-Dues & Clearance Certificate Is Issued<span class="required">*</span></option>
                         <option value="1">Hall Of Residence No. 1</option>
                         <option value="2">Hall Of Residence No. 2</option>
                         <option value="3">Hall Of Residence No. 3</option>
@@ -60,26 +60,41 @@
                 <div class="input-data">
                     <input type="email" id="emailInput" name="Email" required>
                     <div class="underline"></div>
-                    <label id="emailName">Email</label>
+                    <label id="emailName">Email<span class="required">*</span></label>
                 </div>
                 <div class="input-data">
                     <input type="tel" id="mobileInput" name="Mobile" required>
                     <div class="underline"></div>
-                    <label id="contactParName">Mobile No.</label>
+                    <label id="contactParName">Mobile No<span class="required">*</span></label>
                 </div>
             </div>
             <div class="form-row">
                 <div class="input-data">
                     <select name="Programme" id="programmeInput">
-                        <option value="">Undergraduate/Postgraduate</option>
+                        <option value="">Undergraduate/Postgraduate<span class="required">*</span></option>
                         <option value="ug">Undergraduate (UG)</option>
                         <option value="pg">Postgraduate (PG)</option>
                         <option value=" ">None Of The Above</option>
                     </select>
                 </div>
+                <!-- <div class="input-data">
+                    <select name="Registered Year No" id="yearInput">
+                        <option value="">Registration Year As UG/PG Student<span class="required">*</span></option>
+                    </select>
+                </div> -->
+            </div>
+            <div class="form-row">
+                <!-- <div class="input-data">
+                    <select name="Programme" id="programmeInput">
+                        <option value="">Undergraduate/Postgraduate<span class="required">*</span></option>
+                        <option value="ug">Undergraduate (UG)</option>
+                        <option value="pg">Postgraduate (PG)</option>
+                        <option value=" ">None Of The Above</option>
+                    </select>
+                </div> -->
                 <div class="input-data">
                     <select name="Registered Year No" id="yearInput">
-                        <option value="">Registration Year As UG/PG Student</option>
+                        <option value="">Registration Year As UG/PG Student<span class="required">*</span></option>
                     </select>
                 </div>
             </div>
@@ -96,17 +111,17 @@
                 <div class="input-data" id="div1">
                     <input type="number" id="amt1" name="Amount">
                     <div class="underline"></div>
-                    <label id="contactParName">Please input the amount you are willing to contribute.</label>
+                    <label id="contactParName">Please input the amount you are willing to contribute<span class="required">*</span></label>
                 </div>
                 <div style="display: flex;justify-content: start;align-items: center;">
                     <div><input type="checkbox" id="con2" name="con2" value="" style="margin-right: 5px;"></div>
                     <div><label for="con2" style="cursor: pointer;">Wish to contribute a certain amount for Senior Class
-                            Gift programme.</label></div>
+                            Gift programme</label></div>
                 </div>
                 <div class="input-data" id="div2">
                     <input type="number" id="amt2" name="Amount">
                     <div class="underline"></div>
-                    <label id="contactParName">Please input the amount you are willing to contribute.</label>
+                    <label id="contactParName">Please input the amount you are willing to contribute<span class="required">*</span></label>
                 </div>
                 <div style="display: flex;justify-content: start;align-items: center;">
                     <div><input type="checkbox" id="con3" name="con3" value="" style="margin-right: 5px;">
@@ -121,7 +136,7 @@
                     <div class="form-row">
                         <div class="input-data">
                             <select name="Bank Name" id="bankNameInput">
-                                <option value="">Bank Name</option>
+                                <option value="">Bank Name<span class="required">*</span></option>
                                 <option value="Axis Bank">Axis Bank</option>
                                 <option value="Bank of Baroda">Bank of Baroda</option>
                                 <option value="Canara Bank">Canara Bank</option>
@@ -149,14 +164,14 @@
                         <div class="input-data">
                             <input type="text" id="accInput" name="Account No.">
                             <div class="underline"></div>
-                            <label id="accInputt">Account no.</label>
+                            <label id="accInputt">Account no<span class="required">*</span></label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="input-data">
                             <input type="text" id="ifscInput" name="IFSC">
                             <div class="underline"></div>
-                            <label id="ifscInputt">IFSC</label>
+                            <label id="ifscInputt">IFSC<span class="required">*</span></label>
                         </div>
                     </div>
                 </div>
